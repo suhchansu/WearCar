@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+.ui-content section {
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#FFFFFF;
+}

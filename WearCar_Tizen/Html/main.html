@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<link rel="stylesheet"  href="
+	../lib/tau/themes/default/tau.css">
+	<link rel="stylesheet"  href="../css/style.css">
+	
+</head>
+
+<body>
+
+<div id="mMain_display" style="display:">
+   <div id="tabPage" class="ui-page" style="background:black">
+		<div id="tabChanger" class="ui-content">
+			<div>
+				<section style="text-align:center" >
+					<table>
+					<tr>
+						<td width=160 height=160 valign=top>
+							<DIV id="mDoorOpen_Disable" style="display:"><img src="../image/unlock.png" onclick="DoorOpen();"></DIV>
+							<DIV id="mDoorOpen_Enable" style="display:none"><img src="../image/unlock-on.png" onclick="DoorOpen();"></DIV>
+							<div class="c1-text" align=center>Door Open</div>
+						</td>
+						<td width=160 height=160 valign=top>
+							<DIV id="mEngineStart_Disable" style="display:"><img src="../image/engine-start.png" onclick="EngineStart();"></DIV>
+							<DIV id="mEngineStart_Enable" style="display:none"><img src="../image/engine-start-on.png" onclick="EngineStart();"></DIV>
+							<div class="c2-text" align=center>Engine Start</div>
+						</td>
+					</tr>
+					<tr>
+						<td width=160 height=160 valign=top>
+							<DIV id="mDoorLock_Disable" style="display:"><img src="../image/lock.png" onclick="DoorLock();"></DIV>
+							<DIV id="mDoorLock_Enable" style="display:none"><img src="../image/lock-on.png" onclick="DoorLock();" ></DIV>
+							<div class="c3-text" align=center>Door Close</div>
+						</td>
+						<td width=160 height=160 valign=top>
+							<DIV id="mEngineStop_Disable" style="display:"><img src="../image/engine-stop.png" onclick="EngineStop();"></DIV>
+							<DIV id="mEngineStop_Enable" style="display:none"><img src="../image/engine-stop-on.png" onclick="EngineStop();"></DIV>
+							<div class="c4-text" align=center>Engine Stop</div>
+						</td>
+					</tr>
+					</table>					
+				</section>
+				
+				<section style="text-align:center" >			
+					<table>
+					<tr>
+						<td width=160 height=160 valign=top>
+							<DIV id="mWarmingUp_On" style="display:"><img src="../image/warmup.png" onclick="WarmingUp_On();"></DIV>
+							<DIV id="mWarmingUp_Off" style="display:none"><img src="../image/warmup-on.png" onclick="WarmingUp_Off();"></DIV>
+							<div class="c1-text" align=center>Battery On</div>
+						</td>
+						<td width=160 height=160 valign=top>
+							<DIV id="mCarLight_On" style="display:"><img src="../image/light.png" onclick="CarLight_On();"></DIV>
+							<DIV id="mCarLight_Off" style="display:none"><img src="../image/light-on.png" onclick="CarLight_Off();"></DIV>
+							<div class="c2-text" align=center>Car Light On</div>
+						</td>
+					</tr>
+					<tr>
+						<td width=160 height=160 valign=top>
+							<DIV id="mCarSpeaker_On" style="display:"><img src="../image/warning.png" onclick="CarSpeaker_On();"></DIV>
+							<DIV id="mCarSpeaker_Off" style="display:none "><img src="../image/warning-on.png" onclick="CarSpeaker_Off();"></DIV>
+							<div class="c3-text" align=center>Car Speaker</div>
+						</td>
+						<td width=160 height=160 valign=top>
+							<DIV id="mTrunkOpen_On" style="display:"><img src="../image/engine-stop.png" onclick="TrunkOpen_On();"></DIV>
+							<DIV id="mTrunkOpen_Off" style="display:none"><img src="../image/engine-stop-on.png" onclick="TrunkOpen_Off();"></DIV>
+							<div class="c4-text" align=center>Trunk Open</div>
+						</td>
+					</tr>
+					</table>				
+				</section>
+				
+				<section style="text-align:center" >
+					<header class="ui-header">
+						<h2 class="ui-title">Car Status</h2>
+					</header>	
+					<br>			
+					<table>
+					<tr>
+						<td width="107">
+							<div id="mStatusDoorOpen_On" style="display: ">
+								<!--<img width="100" height="100" src="../image/door-open.png" onclick="StatusDoorOpen_On();">-->
+								<img width="100" height="100" src="../image/door-open.png">
+							</div>
+							<div id="mStatusDoorOpen_Off" style="display:none ">
+								<!--<img width="100" height="100" src="../image/door-open-on.png" onclick="StatusDoorOpen_Off();">-->
+								<img width="100" height="100" src="../image/door-open-on.png">
+							</div>		
+						</td>
+						<td width="107">	
+							<div id="mStatusTrunkOpen_On" style="display: ">
+								<!--<img width="100" height="100" src="../image/trunk-open.png" onclick="StatusTrunkOpen_On();">-->
+								<img width="100" height="100" src="../image/trunk-open.png">
+							</div>					
+							<div id="mStatusTrunkOpen_Off" style="display:none ">
+								<!--<img width="100" height="100" src="../image/trunk-open-on.png" onclick="StatusTrunkOpen_Off();">-->
+								<img width="100" height="100" src="../image/trunk-open-on.png">
+							</div>
+						</td>
+						<td>								
+							<div id="mStatusLightOn_On" style="display: ">
+								<!--<img width="100" height="100" src="../image/lamp.png" onclick="StatusLightOn_On();">-->
+								<img width="100" height="100" src="../image/lamp.png">
+							</div>
+							<div id="mStatusLightOn_Off" style="display:none ">
+								<!--<img width="100" height="100" src="../image/lamp-on.png" onclick="StatusLightOn_Off();">-->
+								<img width="100" height="100" src="../image/lamp-on.png">
+							</div>
+						</td>
+					</tr>
+					<tr>	
+						<td width="107">
+							<div id="mStatusDoorOpen_Set_On" style="display: ">
+								<img width="100" height="100" src="../image/set.png" onclick="StatusDoorOpen_Set_On();">
+							</div>
+							<div id="mStatusDoorOpen_Set_Off" style="display:none ">
+								<img width="100" height="100" src="../image/set-on.png" onclick="StatusDoorOpen_Set_Off();">
+							</div>		
+						</td>
+						<td width="107">	
+							<div id="mStatusTrunkOpen_Set_On" style="display: ">
+								<img width="100" height="100" src="../image/set.png" onclick="StatusTrunkOpen_Set_On();">
+							</div>					
+							<div id="mStatusTrunkOpen_Set_Off" style="display:none ">
+								<img width="100" height="100" src="../image/set-on.png" onclick="StatusTrunkOpen_Set_Off();">
+							</div>
+						</td>
+						<td>								
+							<div id="mStatusLightOn_Set_On" style="display: ">
+								<img width="100" height="100" src="../image/set.png" onclick="StatusLightOn_Set_On();">
+							</div>
+							<div id="mStatusLightOn_Set_Off" style="display:none ">
+								<img width="100" height="100" src="../image/set-on.png" onclick="StatusLightOn_Set_Off();">
+							</div>
+						</td>			
+					</tr>
+					</table>
+					
+				</section>				
+			</div>
+		</div>
+   		<script src="./main.js"></script>
+   </div>
+   <script src="./main.js"></script>
+</div>
+
+<div id="mWarningDoor_display" style="display:none">
+	<br>
+	<img width="150" height="150" src="../image/door-open-on.png">	
+	<br>
+	<img width="100" height="100" src="../image/set.png" onclick="WarningDoorOpen_Set_Disable();">
+	<script src="./main.js"></script>
+</div>
+
+<div id="mWarningTrunk_display" style="display:none">	
+	<br>
+	<img width="150" height="150" src="../image/trunk-open-on.png">	
+	<br>
+	<img width="100" height="100" src="../image/set.png" onclick="WarningTrunkOpen_Set_Disable();">
+	<script src="./main.js"></script>
+</div>
+
+<div id="mWarningLight_display" style="display:none">	
+	<img width="150" height="150" src="../image/lamp-on.png">		
+	<br>			
+	<img width="100" height="100" src="../image/set.png" onclick="WarningLightOn_Set_Disable();">
+	<script src="./main.js"></script>
+</div>
+
+<script src="./main.js"></script>
+<script type="text/javascript" src="../lib/tau/js/tau.js"></script>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/app.js"></script>
+</html>
